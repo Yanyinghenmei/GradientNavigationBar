@@ -82,11 +82,6 @@
                             CGFloat ratio = (endPoint.x - startPoint.x)/_navigationController.view.bounds.size.width;
                             
                             // 是否中止滑动返回
-                            /*
-                             模拟器测试, 有时候velocity.x大于500仍然没有返回 最大值为785
-                             由于不知道interactivePopGestureRecognizer滑动返回的判定条件, 
-                             暂时只判断velocity.x 是否小于 500
-                             */
                             BOOL isStopBack = isJustStop && ratio < 0.5 && velocity.x < 500;
                             
                             if (!isStopBack) {
@@ -103,6 +98,19 @@
     }
 }
 
-// 原因:lastObject 并不是每次都是这里需要的控制器 如果出入栈对应就好了
+
+/*
+ 由于滑动返回触发时顶部控制器会立即出栈, 而不是滑动返回结束时在进行出栈操作,
+ 在中止滑动返回的时候的瞬间栈顶的控制器并不是'当前'控制器
+ 这个时候回调'layoutSubviews'设置的颜色就会不对应造成导航条闪动
+ 
+ 解决办法:
+ 通过手势结束时的滑动距离和速度判断是否中途中止了滑动返回
+ 
+ 问题:
+ 模拟器测试, 有时候velocity.x大于500仍然没有返回 已发现最大值为785
+ 由于不知道interactivePopGestureRecognizer滑动返回的判定条件,
+ 暂时以500为阈值
+ */
 
 @end
