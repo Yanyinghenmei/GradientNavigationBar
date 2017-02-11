@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Third";
+//    self.title = @"Third";
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg3"]];
     [self.navigationItem setNavigationBarGradientViewBackgroudColor:[UIColor colorWithRed:178/255.00 green:45/255.00 blue:18/255.00 alpha:1]];
 }

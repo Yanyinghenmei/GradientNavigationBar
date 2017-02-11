@@ -240,7 +240,7 @@
 				TargetAttributes = {
 					653C08E51E4D621400E73F51 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = NW8RX498T2;
+						DevelopmentTeam = YT25KK5ZEJ;
 						ProvisioningStyle = Automatic;
 					};
 					653C08FE1E4D621400E73F51 = {
@@ -463,7 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NW8RX498T2;
+				DEVELOPMENT_TEAM = YT25KK5ZEJ;
 				INFOPLIST_FILE = GradientNavigationBarDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.GradientNavigationBarDemo;
@@ -475,7 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NW8RX498T2;
+				DEVELOPMENT_TEAM = YT25KK5ZEJ;
 				INFOPLIST_FILE = GradientNavigationBarDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.GradientNavigationBarDemo;
@@ -552,6 +552,7 @@
 				653C09151E4D621400E73F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		653C09161E4D621400E73F51 /* Build configuration list for PBXNativeTarget "GradientNavigationBarDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +561,7 @@
 				653C09181E4D621400E73F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		653C09191E4D621400E73F51 /* Build configuration list for PBXNativeTarget "GradientNavigationBarDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +570,7 @@
 				653C091B1E4D621400E73F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
