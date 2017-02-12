@@ -9,7 +9,7 @@
 #import "MyNavigationController.h"
 #import "ZYGradientNavigationBar.h"
 
-@interface MyNavigationController ()
+@interface MyNavigationController ()<UINavigationControllerDelegate>
 
 @end
 
@@ -22,8 +22,32 @@
         navigationBar.navigationController = self;
         [navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
         [self setValue:navigationBar forKey:@"navigationBar"];
+        
+        self.delegate = self;
     }
     return self;
+}
+
+
+// 解决navigationBar连续点击多次跳转bug
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    self.navigationBar.userInteractionEnabled = false;
+    [super pushViewController:viewController animated:animated];
+}
+
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated {
+    self.navigationBar.userInteractionEnabled = false;
+    return [super popViewControllerAnimated:animated];
+}
+
+- (NSArray<UIViewController *> *)popToRootViewControllerAnimated:(BOOL)animated {
+    self.navigationBar.userInteractionEnabled = false;
+    return [super popToRootViewControllerAnimated:animated];
+}
+
+#pragma mark -- UINavigationControllerDelegate
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    self.navigationBar.userInteractionEnabled = true;
 }
 
 @end
