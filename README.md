@@ -1,5 +1,5 @@
 # GradientNavigationBar
-![iage](https://github.com/Yanyinghenmei/GradientNavigationBar/raw/master/image.gif)
+![image](https://github.com/Yanyinghenmei/GradientNavigationBar/raw/master/image.gif)
 
 模仿QQ空间侧滑返回渐变导航栏
 
