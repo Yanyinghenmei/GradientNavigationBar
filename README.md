@@ -2,6 +2,7 @@
 ![image](https://github.com/Yanyinghenmei/GradientNavigationBar/raw/master/image.gif)
 
 模仿QQ空间侧滑返回渐变导航栏
+遗憾的是在模拟器上, 导航栏会出现卡顿现象TAT
 
 MyNavigationController.m
 ```objc
