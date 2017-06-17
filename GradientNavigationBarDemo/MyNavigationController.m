@@ -20,12 +20,30 @@
         
         ZYGradientNavigationBar *navigationBar = [ZYGradientNavigationBar new];
         navigationBar.navigationController = self;
-        [navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
         [self setValue:navigationBar forKey:@"navigationBar"];
         
         self.delegate = self;
+        [self setTheme];
     }
     return self;
+}
+
+- (void)setTheme {
+    // title属性
+    UINavigationBar *bar = [UINavigationBar appearance];
+    NSDictionary *attr = @{NSForegroundColorAttributeName:[UIColor whiteColor],
+                           NSFontAttributeName:[UIFont systemFontOfSize:18]};
+    [bar setTitleTextAttributes:attr];
+    
+    
+    // 按钮图片渲染
+    [bar setTintColor:[UIColor whiteColor]];
+    
+    // 按钮属性
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    NSDictionary *itemAttr = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:16]};
+    [item setTitleTextAttributes:itemAttr forState:UIControlStateNormal];
+    [item setTintColor:[UIColor whiteColor]];
 }
 
 

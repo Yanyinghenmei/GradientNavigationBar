@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"first";
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]];
     // 设置渐变颜色
     [self.navigationItem setNavigationBarGradientViewBackgroudColor:[UIColor colorWithRed:54/255.00 green:176/255.00 blue:237/255.00 alpha:1]];
     

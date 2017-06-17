@@ -13,6 +13,7 @@
 
 - (void)setNavigationController:(UINavigationController *)navigationController {
     _navigationController = navigationController;
+    [self setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)setTranslucent:(BOOL)translucent {
@@ -53,7 +54,23 @@
                             id panDelegate = _navigationController.interactivePopGestureRecognizer.delegate;
                             long long interactionState = [[panDelegate valueForKey:@"_interactionState"] longLongValue];
                             
-                            // 中途取消滑动返回不设置颜色
+                            
+                            // 中途取消 滑动返回 不设置颜色
+                            /*
+                             # interactivePopGestureRecognizer 触发, 栈顶的控制器会立即出栈
+                             
+                             interactionState == 0 :
+                                interactivePopGestureRecognizer结束, 动画结束
+                             interactionState == 1 :
+                                手指未离开屏幕 或者 手指从屏幕右侧离开动画未结束
+                                这里会控制此时栈顶的控制器导航栏的颜色
+                             interactionState == 2 :
+                                从当前页面第一次滑动返回时出现
+                                基本和 interactionState == 1 相似
+                             interactionState == 3 :
+                                手指从屏幕左侧离开, 动画未结束
+                                此时栈顶的控制器并不是我想要控制导航颜色的控制器
+                             */
                             if (interactionState != 3) {
                                 view2.backgroundColor = [_navigationController.viewControllers.lastObject.navigationItem getNavigationBarGradientViewBackgroudColor];
                             }
