@@ -1,6 +1,7 @@
 # GradientNavigationBar
 ![image](https://github.com/Yanyinghenmei/GradientNavigationBar/raw/master/image.gif)
 
+## 很遗憾, 只有iOS10管用... 真是一个伤心的季节.
 ## 模仿QQ空间侧滑返回渐变导航栏
 
 ### 在模拟器上, 导航栏会出现卡顿现象, 真的不是我的错, 原生的导航栏也是这样...
